@@ -1,423 +1,1147 @@
-# SkillForge Academy
+<p align="center">
 
-A full-stack student course portal built with HTML5, CSS3, Vanilla JavaScript, Node.js, and Express.js.
+<img src="assets/banner.png" alt="SkillForge LMS Banner" width="100%">
+
+</p>
+
+<h1 align="center">
+🚀 SkillForge LMS
+</h1>
+
+<p align="center">
+
+Complete Full Stack Learning Management System
+
+Built with HTML • CSS • JavaScript • Node.js • Express.js • MongoDB
+
+</p>
+
+<p align="center">
+
+<img src="https://img.shields.io/badge/Frontend-HTML5%20%7C%20CSS3%20%7C%20JavaScript-orange?style=for-the-badge">
+
+<img src="https://img.shields.io/badge/Backend-Node.js%20%7C%20Express.js-green?style=for-the-badge">
+
+<img src="https://img.shields.io/badge/Database-MongoDB-success?style=for-the-badge">
+
+<img src="https://img.shields.io/badge/Auth-JWT-blue?style=for-the-badge">
+
+<img src="https://img.shields.io/badge/Architecture-MVC-red?style=for-the-badge">
+
+<img src="https://img.shields.io/badge/License-MIT-purple?style=for-the-badge">
+
+</p>
 
 ---
 
-## Project Structure
+# 📖 Table of Contents
+
+- Overview
+- Features
+- Screenshots
+- Technology Stack
+- Project Structure
+- System Architecture
+- Database Design
+- API Documentation
+- Security Features
+- Installation Guide
+- Environment Variables
+- Project Workflow
+- Future Enhancements
+- Developer
+- License
+
+---
+
+# 📚 Project Overview
+
+SkillForge LMS is a modern Full Stack Learning Management System developed as an integrated project for the Decode Labs Full Stack Development Internship.
+
+The objective of this project is to provide students with a complete online learning platform where they can register, enroll in programming courses, track learning progress, complete lessons, unlock certificates, and manage their learning journey through a clean and responsive dashboard.
+
+The application follows a modular MVC architecture and demonstrates real-world software engineering practices including secure authentication, RESTful APIs, MongoDB database integration, payment workflow, progress tracking, certificate generation, and scalable backend development.
+
+Unlike a simple CRUD application, SkillForge LMS combines frontend, backend, and database technologies into one complete ecosystem capable of handling real user workflows.
+
+---
+
+# 🎯 Project Objectives
+
+- Develop a complete Learning Management System
+
+- Implement Full Stack Architecture
+
+- Design RESTful APIs
+
+- Integrate MongoDB Database
+
+- Secure User Authentication
+
+- Manage Course Enrollments
+
+- Track Student Progress
+
+- Generate Course Certificates
+
+- Demonstrate Clean MVC Architecture
+
+- Follow Professional Development Practices
+
+---
+
+# ✨ Core Features
+
+## 👨‍🎓 Student Module
+
+- Student Registration
+- Secure Login
+- JWT Authentication
+- Profile Management
+- Dashboard Access
+
+---
+
+## 📚 Course Management
+
+- Browse Available Courses
+
+- Course Details
+
+- Learning Outcomes
+
+- Modules
+
+- Lessons
+
+- Course Progress
+
+---
+
+## 🎥 Lesson System
+
+- Structured Lessons
+
+- Lesson Completion
+
+- Progress Tracking
+
+- Module Organization
+
+- Learning Status
+
+---
+
+## 📈 Progress Tracking
+
+- Percentage Completion
+
+- Dashboard Statistics
+
+- Lesson Progress
+
+- Course Progress
+
+- Certificate Eligibility
+
+---
+
+## 🏆 Certificate Module
+
+- Automatic Certificate Unlock
+
+- Certificate Generation
+
+- Download Certificate
+
+- Certificate Verification
+
+---
+
+## 💳 Payment System
+
+- Payment Initialization
+
+- Enrollment Verification
+
+- Payment Confirmation
+
+- Enrollment Management
+
+---
+
+## 🔐 Authentication
+
+- Register
+
+- Login
+
+- JWT Token Authentication
+
+- Password Encryption
+
+- Protected Routes
+
+- Authorization Middleware
+
+---
+
+## 📡 REST APIs
+
+- Authentication APIs
+
+- Course APIs
+
+- Lesson APIs
+
+- Progress APIs
+
+- Payment APIs
+
+- Dashboard APIs
+
+- Certificate APIs
+
+- Contact APIs
+
+- Newsletter APIs
+
+- FAQ APIs
+
+- Statistics APIs
+
+---
+
+## ⚙ Backend Features
+
+- Express.js Server
+
+- MVC Architecture
+
+- Service Layer
+
+- Controllers
+
+- Middleware
+
+- Route Separation
+
+- Validation
+
+- Error Handling
+
+- Modular Structure
+
+---
+
+# 🖼️ Application Screenshots
 
 ```
-skillforge/
-├── frontend/
-│   ├── index.html              # Single-page application shell
-│   ├── css/
-│   │   └── style.css           # Complete stylesheet (mobile-first, CSS vars, Grid, Flexbox)
-│   ├── js/
-│   │   └── script.js           # All JS features + API integration
-│   └── assets/                 # Static assets (images, icons)
+screenshots/
+
+home.png
+
+login.png
+
+register.png
+
+dashboard.png
+
+courses.png
+
+course-details.png
+
+payment.png
+
+certificate.png
+```
+
+---
+
+## 🏠 Homepage
+
+<img width="1366" height="686" alt="Screenshot 2026-06-29 004357" src="https://github.com/user-attachments/assets/0bf40a1b-38f2-4d0d-850c-7e28e74fdf73" />
+
+
+
+---
+
+## 🔑 Login
+
+<img width="1363" height="684" alt="Screenshot 2026-06-19 154708" src="https://github.com/user-attachments/assets/5597d480-f3d2-4695-be37-101a0c18e7fb" />
+
+---
+
+## 👤 Registration
+
+<img width="1353" height="686" alt="Screenshot 2026-06-29 004811" src="https://github.com/user-attachments/assets/e362856d-35cb-4062-b1d1-3248fe59ccf8" />
+
+---
+
+## 📚 Course Catalogue
+
+<img width="1365" height="683" alt="Screenshot 2026-06-19 154906" src="https://github.com/user-attachments/assets/c4b99a3e-b16f-41e7-86b2-f99c368e1188" />
+
+
+---
+
+## 💳 Payment Page
+
+<img width="1363" height="690" alt="Screenshot 2026-06-29 004715" src="https://github.com/user-attachments/assets/d4580cf1-9b7a-449f-815f-68288ce04547" />
+
+
+---
+
+## 📈 Student Dashboard
+
+<img width="1364" height="685" alt="Screenshot 2026-06-19 154810" src="https://github.com/user-attachments/assets/f6fe712c-de8e-47d3-9a66-b8e8bf0eebed" />
+
+---
+
+## 📖 Course Learning
+
+<img width="1360" height="686" alt="Screenshot 2026-06-29 005009" src="https://github.com/user-attachments/assets/d760d847-c38e-467f-af8e-1bc3ca032c75" />
+
+---
+
+
+---
+
+# 🛠️ Technology Stack
+
+| Category | Technologies |
+|-----------|--------------|
+| Frontend | HTML5, CSS3, JavaScript |
+| Backend | Node.js |
+| Framework | Express.js |
+| Database | MongoDB |
+| ODM | Mongoose |
+| Authentication | JWT |
+| Password Security | bcryptjs |
+| API Testing | Postman |
+| Version Control | Git |
+| Repository | GitHub |
+| Development Tool | VS Code |
+
+---
+
+# 📂 Project Structure
+
+```text
+SkillForge-LMS
+
 │
-└── backend/
-    ├── server.js               # Express entry point
-    ├── .env                    # Environment variables (not committed)
-    ├── package.json
-    ├── routes/
-    │   ├── courses.js
-    │   ├── enrollments.js
-    │   ├── testimonials.js
-    │   ├── faqs.js
-    │   ├── stats.js
-    │   ├── contact.js
-    │   └── newsletter.js
-    ├── controllers/
-    │   ├── coursesController.js
-    │   ├── enrollmentsController.js
-    │   ├── testimonialsController.js
-    │   ├── faqsController.js
-    │   ├── statsController.js
-    │   ├── contactController.js
-    │   └── newsletterController.js
-    ├── middleware/
-    │   ├── errorHandlers.js
-    │   └── requestLogger.js
-    ├── validators/
-    │   └── inputValidators.js
-    ├── utils/
-    │   ├── dataStore.js
-    │   ├── response.js
-    │   └── sanitizer.js
-    ├── data/
-    │   ├── courses.json
-    │   ├── testimonials.json
-    │   ├── faqs.json
-    │   ├── stats.json
-    │   ├── enrollments.json    # Written to on POST /api/enrollments
-    │   ├── contacts.json       # Written to on POST /api/contact
-    │   └── newsletter.json     # Written to on POST /api/newsletter
-    └── docs/
-        └── API.md              # Full API reference
+
+├── backend/
+
+├── frontend/
+
+├── CHANGELOG.md
+
+├── DEPLOYMENT_NOTES.md
+
+├── README.md
+
+└── .gitignore
 ```
 
 ---
 
-<<<<<<< HEAD
-## Prerequisites
+# 📦 Backend Structure
 
-- **Node.js** v18 or higher — https://nodejs.org
-- A browser (Chrome, Firefox, Edge, Safari)
-- A static file server for the frontend (VS Code Live Server, or `npx serve`)
+```text
+backend/
+
+│
+
+├── config/
+
+├── controllers/
+
+├── middleware/
+
+├── migrations/
+
+├── models/
+
+├── routes/
+
+├── services/
+
+├── validators/
+
+├── utils/
+
+├── docs/
+
+├── seed/
+
+├── data/
+
+├── package.json
+
+├── package-lock.json
+
+├── server.js
+
+└── .env.example
+```
 
 ---
 
-## Setup Instructions
+# 🎨 Frontend Structure
 
-### 1. Clone / extract the project
+```text
+frontend/
 
-```bash
-cd skillforge
+│
+
+├── assets/
+
+├── css/
+
+├── js/
+
+├── index.html
+
+├── login.html
+
+├── register.html
+
+├── dashboard.html
+
+├── course.html
+
+└── payment.html
 ```
 
-### 2. Install backend dependencies
+---
+---
+
+# 🏗️ System Architecture
+
+The application follows a modular MVC (Model–View–Controller) architecture to ensure maintainability, scalability, and separation of concerns.
+
+```mermaid
+flowchart TD
+
+A[Client Browser]
+
+B[Frontend HTML CSS JavaScript]
+
+C[Express REST API]
+
+D[Controllers]
+
+E[Services]
+
+F[Models]
+
+G[(MongoDB)]
+
+H[JWT Authentication]
+
+I[Payment Module]
+
+J[Certificate Module]
+
+K[Progress Tracking]
+
+A --> B
+
+B --> C
+
+C --> D
+
+D --> E
+
+E --> F
+
+F --> G
+
+C --> H
+
+C --> I
+
+C --> J
+
+C --> K
+```
+
+---
+
+# ⚙️ Backend Architecture
+
+```text
+Client
+
+↓
+
+Frontend
+
+↓
+
+REST API
+
+↓
+
+Express Server
+
+↓
+
+Routes
+
+↓
+
+Controllers
+
+↓
+
+Services
+
+↓
+
+Models
+
+↓
+
+MongoDB
+```
+
+---
+
+# 🗄️ Database Design
+
+SkillForge LMS uses MongoDB to manage application data through multiple collections.
+
+The database has been designed to maintain data consistency while keeping the architecture modular and scalable.
+
+---
+
+# 📂 Database Collections
+
+| Collection | Purpose |
+|------------|---------|
+| Students | Store student information |
+| Courses | Course Information |
+| Modules | Course Modules |
+| Lessons | Lesson Details |
+| LessonProgress | Lesson Completion |
+| Enrollments | Student Enrollment |
+| Payments | Payment Records |
+| Certificates | Generated Certificates |
+| FAQs | Frequently Asked Questions |
+| Subscribers | Newsletter Subscribers |
+| Testimonials | Student Reviews |
+| ContactMessages | Contact Form Messages |
+
+---
+
+# 🗃️ Entity Relationship Diagram
+
+```mermaid
+erDiagram
+
+STUDENT ||--o{ ENROLLMENT : enrolls
+
+COURSE ||--o{ ENROLLMENT : contains
+
+COURSE ||--o{ MODULE : has
+
+MODULE ||--o{ LESSON : contains
+
+LESSON ||--o{ LESSON_PROGRESS : tracks
+
+STUDENT ||--o{ LESSON_PROGRESS : completes
+
+STUDENT ||--o{ PAYMENT : makes
+
+PAYMENT ||--|| ENROLLMENT : confirms
+
+STUDENT ||--o{ CERTIFICATE : earns
+```
+
+---
+
+# 🔄 Application Workflow
+
+```mermaid
+flowchart LR
+A[Register] --> B[Login]
+B --> C[Browse Course]
+C --> D[Course Details]
+D --> E[Payment]
+E --> F[Enrollment]
+F --> G[LEssons]
+G --> H[Progress Tracking]
+H --> I[Certificate]
+```
+
+---
+
+# 📡 REST API Documentation
+
+## 🔐 Authentication APIs
+
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| POST | /api/auth/register | Register Student |
+| POST | /api/auth/login | Student Login |
+| POST | /api/auth/logout | Logout Student |
+
+---
+
+## 📚 Course APIs
+
+| Method | Endpoint |
+|---------|----------|
+| GET | /api/courses |
+| GET | /api/courses/:id |
+
+---
+
+## 📖 Lesson APIs
+
+| Method | Endpoint |
+|---------|----------|
+| GET | /api/lessons |
+| GET | /api/lessons/:id |
+
+---
+
+## 📈 Progress APIs
+
+| Method | Endpoint |
+|---------|----------|
+| GET | /api/progress/dashboard |
+| POST | /api/progress/update |
+
+---
+
+## 💳 Payment APIs
+
+| Method | Endpoint |
+|---------|----------|
+| POST | /api/payments/initiate/:courseId |
+| POST | /api/payments/verify |
+
+---
+
+## 🏆 Certificate APIs
+
+| Method | Endpoint |
+|---------|----------|
+| GET | /api/certificates |
+
+---
+
+## 📊 Statistics APIs
+
+| Method | Endpoint |
+|---------|----------|
+| GET | /api/stats |
+
+---
+
+## ❓ FAQ APIs
+
+| Method | Endpoint |
+|---------|----------|
+| GET | /api/faqs |
+
+---
+
+## 📧 Newsletter APIs
+
+| Method | Endpoint |
+|---------|----------|
+| POST | /api/newsletter |
+
+---
+
+## 📞 Contact APIs
+
+| Method | Endpoint |
+|---------|----------|
+| POST | /api/contact |
+
+---
+
+# 🔒 Security Features
+
+The project implements multiple security practices to ensure safe and reliable application behavior.
+
+## Authentication
+
+- JSON Web Token (JWT)
+- Protected Routes
+- Secure Login System
+
+---
+
+## Password Security
+
+- bcryptjs Password Hashing
+- Password Comparison
+- Secure Storage
+
+---
+
+## API Security
+
+- Authentication Middleware
+- Input Validation
+- Error Handling Middleware
+- Route Protection
+
+---
+
+## Database Security
+
+- Mongoose Schema Validation
+- Data Sanitization
+- Controlled CRUD Operations
+
+---
+
+## General Security
+
+- Environment Variables
+- Modular Codebase
+- Clean Error Responses
+
+---
+
+# ⚙️ Installation Guide
+
+## Clone Repository
 
 ```bash
-cd backend
+git clone https://github.com/Ujjwal26006/Decodelab-task4-Ujjwal.git
+```
+
+---
+
+## Move into Backend
+
+```bash
+cd Decodelab-task4-Ujjwal/backend
+```
+
+---
+
+## Install Dependencies
+
+```bash
 npm install
 ```
 
-### 3. Configure environment variables
+---
 
-The `.env` file is pre-configured for local development:
-
-```
-PORT=5000
-NODE_ENV=development
-CORS_ORIGIN=http://127.0.0.1:5500
-RATE_LIMIT_WINDOW_MS=900000
-RATE_LIMIT_MAX=100
-```
-
-> If your frontend runs on a different origin (e.g. port 3000), update `CORS_ORIGIN` accordingly.
-
-### 4. Start the backend server
+## Create Environment File
 
 ```bash
-# From the backend/ directory
-npm start
+cp .env.example .env
 ```
 
-For development with auto-reload:
+---
+
+## Example Environment Variables
+
+```env
+PORT=5000
+
+MONGO_URI=your_mongodb_connection_string
+
+JWT_SECRET=your_secret_key
+
+NODE_ENV=development
+
+CLIENT_URL=http://localhost:5173
+```
+
+---
+
+## Start Backend Server
 
 ```bash
 npm run dev
 ```
 
-The API will be available at: `http://localhost:5000/api`
+---
 
-### 5. Serve the frontend
+## Start Frontend
 
-**Option A — VS Code Live Server (recommended)**
-- Open the `frontend/` folder in VS Code
-- Right-click `index.html` → "Open with Live Server"
-- Default URL: `http://127.0.0.1:5500`
+Open
 
-**Option B — npx serve**
-```bash
-npx serve frontend -p 5500
+```text
+frontend/index.html
 ```
 
-**Option C — Python (quick check)**
-```bash
-cd frontend
-python3 -m http.server 5500
-```
+using Live Server
 
-### 6. Open the application
+OR
 
-Navigate to `http://127.0.0.1:5500` (or whichever port your server uses).
+Run any local static server.
 
 ---
 
-## Testing Instructions
+# 📂 Important Files
 
-### Manual API Testing (curl)
-
-**Health check**
-```bash
-curl http://localhost:5000/api/health
-```
-
-**Get all courses**
-```bash
-curl http://localhost:5000/api/courses
-```
-
-**Get single course**
-```bash
-curl http://localhost:5000/api/courses/1
-```
-
-**Get stats**
-```bash
-curl http://localhost:5000/api/stats
-```
-
-**Get testimonials**
-```bash
-curl http://localhost:5000/api/testimonials
-```
-
-**Get FAQs**
-```bash
-curl http://localhost:5000/api/faqs
-```
-
-**Submit lment (valid)**
-```bash
-curl -X POST http://localhost:5000/api/enrollments \
-  -H "Content-Type: application/json" \
-  -d '{"name":"Priya Sharma","email":"priya@example.com","courseId":"1"}'
-```
-
-**Submit enrollment (invalid — triggers 400)**
-```bash
-curl -X POST http://localhost:5000/api/enrollments \
-  -H "Content-Type: application/json" \
-  -d '{"name":"P","email":"not-an-email","courseId":""}'
-```
-
-**Submit contact form**
-```bash
-curl -X POST http://localhost:5000/api/contact \
-  -H "Content-Type: application/json" \
-  -d '{"name":"Arjun Mehta","email":"arjun@example.com","phone":"9876543210","message":"I have a question about the Data Science course."}'
-```
-
-**Subscribe to newsletter**
-```bash
-curl -X POST http://localhost:5000/api/newsletter \
-  -H "Content-Type: application/json" \
-  -d '{"email":"subscriber@example.com"}'
-```
-
-**Subscribe again (triggers 409 duplicate)**
-```bash
-curl -X POST http://localhost:5000/api/newsletter \
-  -H "Content-Type: application/json" \
-  -d '{"email":"subscriber@example.com"}'
-```
-
-**Non-existent route (triggers 404)**
-```bash
-curl http://localhost:5000/api/unknown
-```
-
-### Frontend Functional Checklist
-
-| Feature                           | How to test                                       |
-|-----------------------------------|---------------------------------------------------|
-| Mobile hamburger menu             | Resize browser < 768px, click ☰                  |
-| Nav closes on link click (mobile) | Open nav → click a nav link                       |
-| Active nav highlight              | Scroll through sections — nav link highlights     |
-| Courses load from API             | Page load — 6 course cards appear                 |
-| Stats animate on scroll           | Scroll to the dark stats band — counters animate  |
-| Testimonials load                 | Scroll to reviews section                         |
-| FAQ accordion                     | Click any question — expands/collapses smoothly   |
-| FAQ keyboard navigation           | Tab to a question, use Arrow Up/Down              |
-| Contact form validation           | Submit empty form — field errors appear           |
-| Contact form success              | Fill all fields correctly — success message       |
-| Enroll modal opens                | Click any "Enroll" button on a course card        |
-| Enroll modal closes               | Click ✕, click outside, or press Escape           |
-| Enrollment submission             | Fill modal form → Submit Enrollment               |
-| Newsletter validation             | Submit empty/invalid email — error appears        |
-| Newsletter duplicate prevention   | Subscribe twice with same email — 409 response    |
-| Scroll reveal animations          | Scroll down slowly — cards fade up into view      |
-| Responsive layout                 | Resize to 375px, 768px, 1280px                   |
-
-### Data Files Verification
-
-After submitting forms, inspect the data files to confirm writes:
-
-```bash
-cat backend/data/enrollments.json
-cat backend/data/contacts.json
-cat backend/data/newsletter.json
-```
+| File | Purpose |
+|------|---------|
+| server.js | Application Entry Point |
+| package.json | Project Metadata |
+| .env.example | Environment Variables |
+| README.md | Documentation |
+| CHANGELOG.md | Version History |
+| DEPLOYMENT_NOTES.md | Deployment Guide |
 
 ---
 
-## Security Features
+# 📁 Documentation
 
-| Feature           | Implementation                              |
-|-------------------|---------------------------------------------|
-| Helmet            | Sets 11+ HTTP security headers              |
-| CORS              | Restricted to `CORS_ORIGIN` env variable    |
-| Rate Limiting     | 100 req/15 min global; 10 req/min on POSTs  |
-| Input Sanitization| HTML tags stripped before validation        |
-| Validation        | Server-side validation on all POST routes   |
-| Body Size Limit   | JSON body capped at 10kb                    |
-| No secret exposure| .env is never committed; errors sanitized   |
+The repository includes additional project documentation.
+
+- CHANGELOG.md
+- DEPLOYMENT_NOTES.md
+- backend/docs/API.md
+- backend/docs/DATABASE.md
 
 ---
 
-## Future Upgrade Path
+---
 
-### MongoDB Migration
+# 🚀 Future Enhancements
 
-The `dataStore.js` utility is the sole data access layer. To migrate:
+The current version of SkillForge LMS provides a complete learning platform for students. Future releases will focus on improving scalability, collaboration, analytics, and learning experience.
 
-1. Install Mongoose: `npm install mongoose`
-2. Create `utils/db.js` with a Mongoose connection
-3. Create schema files under `models/` (e.g. `models/Course.js`)
-4. Replace function bodies in `dataStore.js` with Mongoose equivalents
-5. No controller, route, or validator code needs to change
+## 👨‍🏫 Instructor Panel
 
-### JWT Authentication
-
-1. Install `jsonwebtoken` and `bcryptjs`
-2. Add `POST /api/auth/register` and `POST /api/auth/login` routes
-3. Create `middleware/authenticate.js` that verifies Bearer tokens
-4. Add the middleware to protected routes (e.g. enrollment management)
-
-### Admin Dashboard
-
-1. Create `frontend/admin/` with its own HTML, CSS, JS
-2. Protect all admin API routes with JWT + role check (`req.user.role === 'admin'`)
-3. Add admin-only endpoints:
-   - `GET /api/admin/enrollments` — view all enrollment requests
-   - `PATCH /api/admin/enrollments/:id` — approve / reject
-   - `GET /api/admin/contacts` — view contact submissions
-   - `POST /api/courses` / `PUT /api/courses/:id` / `DELETE /api/courses/:id`
-=======
-# 🔄 Application Workflow
-
-```
-Student Registration
-          │
-          ▼
-      User Login
-          │
-          ▼
-   Browse Courses
-          │
-          ▼
-     Course Enrollment
-          │
-          ▼
-        Payment
-          │
-          ▼
-    Access Lessons
-          │
-          ▼
- Complete Lessons
-          │
-          ▼
- Track Progress
-          │
-          ▼
- Unlock Certificate
-```
+- Create & Manage Courses
+- Upload Lessons
+- Manage Modules
+- Track Student Progress
+- View Course Analytics
 
 ---
 
-# 🗄 Database Collections
+## 🛡️ Admin Dashboard
 
-- Students
-- Courses
-- Modules
-- Lessons
-- Lesson Progress
-- Enrollments
-- Payments
-- Certificates
-- Testimonials
-- Contact Messages
-- FAQ
-- Subscribers
+- Manage Students
+- Manage Courses
+- Manage Payments
+- Manage Certificates
+- Manage Testimonials
+- Manage FAQs
+- Website Analytics
 
 ---
 
-# 🔗 REST APIs
+## 🎯 Student Features
 
-- Authentication
-- Courses
-- Lessons
-- Progress
-- Payments
-- Certificates
-- Dashboard
-- Statistics
+- Assignment Submission
+- Quiz System
+- Discussion Forum
+- Bookmark Lessons
+- Wishlist Courses
+- Download Resources
 
 ---
 
-# 🔐 Security Features
+## 🤖 AI Features
 
-- JWT Authentication
-- Password Hashing
-- Protected Routes
-- Environment Variables
-- Input Validation
-- Error Handling
+- AI Course Recommendations
+- Smart Learning Suggestions
+- AI Study Planner
+- Personalized Dashboard
 
 ---
 
-# 🚀 Installation
+## ☁️ Cloud Deployment
 
-## Clone Repository
+- Docker Support
+- Nginx Configuration
+- Render Deployment
+- Vercel Frontend
+- MongoDB Atlas
+- CI/CD Pipeline
 
-```bash
-git clone https://github.com/yourusername/SkillForge-LMS.git
-```
+---
+
+## 📧 Communication
+
+- Email Verification
+- Password Reset
+- OTP Authentication
+- Email Notifications
+- Course Completion Emails
+
+---
+
+## 📱 Mobile Experience
+
+- Progressive Web App (PWA)
+- Android Support
+- iOS Support
+- Offline Learning
+
+---
+
+# 🚀 Deployment
+
+## Frontend
+
+The frontend can be deployed using:
+
+- GitHub Pages
+- Netlify
+- Vercel
 
 ---
 
 ## Backend
 
-```bash
-cd backend
+The backend can be deployed using:
 
-npm install
+- Render
+- Railway
+- DigitalOcean
+- AWS EC2
 
-npm run dev
+---
+
+## Database
+
+MongoDB Atlas is recommended for production deployment.
+
+---
+
+# 🧪 Testing
+
+The project can be tested using the following tools.
+
+### API Testing
+
+- Postman
+
+### Manual Testing
+
+- Registration
+- Login
+- Course Enrollment
+- Lesson Completion
+- Dashboard
+- Certificate Generation
+- Payment Flow
+
+---
+
+# 📊 Project Highlights
+
+✅ Full Stack Development
+
+✅ MVC Architecture
+
+✅ REST APIs
+
+✅ JWT Authentication
+
+✅ MongoDB Integration
+
+✅ Course Management
+
+✅ Lesson Tracking
+
+✅ Certificate Generation
+
+✅ Payment Integration
+
+✅ Responsive User Interface
+
+✅ Modular Backend
+
+✅ Secure Authentication
+
+---
+
+# 🎯 Why This Project?
+
+SkillForge LMS demonstrates the implementation of a production-inspired Learning Management System using modern web technologies.
+
+The project showcases practical concepts including:
+
+- Clean Architecture
+- Modular Backend Design
+- Authentication & Authorization
+- REST API Development
+- Database Design
+- MVC Pattern
+- Service Layer Architecture
+- Payment Workflow
+- Certificate Management
+- Responsive Frontend
+
+It was developed as a comprehensive project to strengthen Full Stack Development skills while following professional software engineering practices.
+
+---
+
+# 📈 Learning Outcomes
+
+This project helped in gaining practical experience in:
+
+- Frontend Development
+- Backend Development
+- MongoDB Integration
+- Express.js
+- Authentication
+- API Development
+- Project Structure
+- Git & GitHub
+- Database Design
+- Clean Code Principles
+
+---
+
+# 📂 Repository Information
+
+Repository Name
+
+```
+Decodelab-task4-Ujjwal
+```
+
+Project Name
+
+```
+SkillForge LMS
+```
+
+Architecture
+
+```
+MVC (Model View Controller)
+```
+
+Project Type
+
+```
+Full Stack Learning Management System
 ```
 
 ---
 
-## Frontend
+# 🤝 Contributing
 
-Open
+Contributions are welcome.
+
+If you would like to improve this project:
+
+1. Fork the repository
+
+2. Create a new feature branch
+
+3. Commit your changes
+
+4. Push to your branch
+
+5. Open a Pull Request
+
+---
+
+# 📝 Changelog
+
+Project updates are maintained in
 
 ```
-frontend/index.html
+CHANGELOG.md
 ```
 
-or
+---
 
-Run using Live Server.
+# 📦 Deployment Notes
+
+Deployment documentation is available in
+
+```
+DEPLOYMENT_NOTES.md
+```
 
 ---
 
-# 🌟 Future Improvements
+# 📚 Additional Documentation
 
-- Instructor Dashboard
-- Admin Panel
-- AI Course Recommendation
-- Email Verification
-- Password Reset
-- Video Streaming
-- Discussion Forum
-- Assignment Submission
-- Notifications
-- Dark Mode
+Backend Documentation
 
----
+```
+backend/docs/API.md
+```
 
+Database Documentation
 
-
-# 📜 License
-
-This project is developed for educational purposes and Full Stack Development learning.
+```
+backend/docs/DATABASE.md
+```
 
 ---
 
-⭐ If you found this project useful, consider giving it a Star.
->>>>>>> ee25f1ec85e5bad677f007469912ab9648c02580
+# 🌐 Live Demo
+
+🚧 Coming Soon
+
+Deployment will be added in future updates.
+
+---
+
+# 🙏 Acknowledgements
+
+Special thanks to
+
+- Decode Labs
+- Open Source Community
+- Node.js
+- Express.js
+- MongoDB
+- GitHub
+
+for providing the tools and ecosystem that made this project possible.
+
+---
+
+# 📄 License
+
+This project is developed for educational purposes as part of the Decode Labs Full Stack Development Internship.
+
+You are free to explore the code, learn from the implementation, and use it as a reference for educational projects.
+
+---
+
+# ⭐ Support
+
+If you found this project helpful:
+
+⭐ Star this repository
+
+🍴 Fork the repository
+
+📢 Share your feedback
+
+---
+
+<div align="center">
+
+# 🚀 SkillForge LMS
+
+### Complete Full Stack Learning Management System
+
+Built with using
+
+HTML • CSS • JavaScript • Node.js • Express.js • MongoDB
+
+---
+
+**Developed by Ujjwal Garg**
+
+⭐ Thank you for visiting this repository ⭐
+
+</div>
