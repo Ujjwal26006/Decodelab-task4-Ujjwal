@@ -1,0 +1,80 @@
+[
+  {
+    "id": "1",
+    "title": "Web Development",
+    "slug": "web-development",
+    "description": "Master HTML, CSS, JavaScript, and modern frameworks to build production-grade web applications from scratch.",
+    "duration": "12 Weeks",
+    "price": 8999,
+    "category": "Development",
+    "level": "Beginner to Advanced",
+    "image": "assets/course-web-dev.svg",
+    "topics": ["HTML5 & CSS3", "JavaScript ES6+", "Node.js", "REST APIs", "Git & Deployment"],
+    "seats": 30
+  },
+  {
+    "id": "2",
+    "title": "Data Science",
+    "slug": "data-science",
+    "description": "Learn data wrangling, statistical analysis, and machine learning pipelines using Python and industry-standard libraries.",
+    "duration": "14 Weeks",
+    "price": 11999,
+    "category": "Data",
+    "level": "Intermediate",
+    "image": "assets/course-data-science.svg",
+    "topics": ["Pandas & NumPy", "Data Visualization", "Statistics", "Scikit-learn", "SQL"],
+    "seats": 25
+  },
+  {
+    "id": "3",
+    "title": "Python Programming",
+    "slug": "python-programming",
+    "description": "Go from zero to confident Python developer. Covers core language features, OOP, file I/O, APIs, and automation scripting.",
+    "duration": "8 Weeks",
+    "price": 5999,
+    "category": "Programming",
+    "level": "Beginner",
+    "image": "assets/course-python.svg",
+    "topics": ["Python Basics", "OOP", "File Handling", "APIs", "Automation"],
+    "seats": 40
+  },
+  {
+    "id": "4",
+    "title": "Java Development",
+    "slug": "java-development",
+    "description": "Build robust backend systems and enterprise applications using Java, Spring Boot, and industry-standard design patterns.",
+    "duration": "16 Weeks",
+    "price": 12999,
+    "category": "Development",
+    "level": "Intermediate to Advanced",
+    "image": "assets/course-java.svg",
+    "topics": ["Core Java", "Spring Boot", "JPA & Hibernate", "Microservices", "Testing"],
+    "seats": 20
+  },
+  {
+    "id": "5",
+    "title": "UI/UX Design",
+    "slug": "ui-ux-design",
+    "description": "Design intuitive, accessible digital products using user research, wireframing, prototyping, and Figma.",
+    "duration": "10 Weeks",
+    "price": 7999,
+    "category": "Design",
+    "level": "Beginner to Intermediate",
+    "image": "assets/course-uiux.svg",
+    "topics": ["Design Thinking", "Wireframing", "Figma", "Usability Testing", "Design Systems"],
+    "seats": 25
+  },
+  {
+    "id": "6",
+    "title": "Machine Learning",
+    "slug": "machine-learning",
+    "description": "Implement supervised and unsupervised learning algorithms, neural networks, and end-to-end ML pipelines with real datasets.",
+    "duration": "18 Weeks",
+    "price": 14999,
+    "category": "AI",
+    "level": "Advanced",
+    "image": "assets/course-ml.svg",
+    "topics": ["Regression & Classification", "Neural Networks", "Deep Learning", "Model Deployment", "MLOps"],
+    "seats": 15
+  }
+]

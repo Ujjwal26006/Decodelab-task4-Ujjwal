@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "name": "Priya Sharma",
+    "course": "Web Development",
+    "review": "SkillForge's curriculum is exceptionally practical. Within three months I landed a junior developer role at a product startup. The mentors don't just teach — they prepare you for real code reviews.",
+    "avatar": "PS",
+    "rating": 5
+  },
+  {
+    "id": "2",
+    "name": "Arjun Mehta",
+    "course": "Data Science",
+    "review": "I came in as an analyst with zero machine learning exposure. The structured progression from statistics to Scikit-learn to real project work made the transition feel natural, not overwhelming.",
+    "avatar": "AM",
+    "rating": 5
+  },
+  {
+    "id": "3",
+    "name": "Sunita Rao",
+    "course": "UI/UX Design",
+    "review": "The portfolio projects alone were worth the price. Every assignment is aligned to what design teams actually look for — not theoretical exercises. I had three interviews within weeks of graduating.",
+    "avatar": "SR",
+    "rating": 5
+  },
+  {
+    "id": "4",
+    "name": "Vikram Nair",
+    "course": "Machine Learning",
+    "review": "Best decision I made for my career. The ML program covers deployment and MLOps, which most courses skip entirely. My capstone project is now running in production at my company.",
+    "avatar": "VN",
+    "rating": 5
+  },
+  {
+    "id": "5",
+    "name": "Ananya Iyer",
+    "course": "Python Programming",
+    "review": "I finished this course in six weeks while working full time. The pacing is well-thought-out and the instructors respond to doubts quickly. I automated three workflows at work the very next day.",
+    "avatar": "AI",
+    "rating": 4
+  },
+  {
+    "id": "6",
+    "name": "Rohit Gupta",
+    "course": "Java Development",
+    "review": "The Spring Boot section alone is worth it. We built a microservices system from scratch, including CI/CD pipelines. The placement support team helped me prepare specifically for the companies I was targeting.",
+    "avatar": "RG",
+    "rating": 5
+  }
+]

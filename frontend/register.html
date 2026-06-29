@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Create your free SkillForge Academy student account." />
+  <title>Register — SkillForge Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/lms.css" />
+</head>
+<body class="auth-page">
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="SkillForge Academy home">
+        <span class="logo-mark" aria-hidden="true">SF</span>
+        <span class="logo-text">SkillForge</span>
+      </a>
+      <p style="font-size:var(--text-sm);color:var(--color-muted)">
+        Already have an account? <a href="login.html" style="color:var(--color-primary);font-weight:600">Sign in</a>
+      </p>
+    </div>
+  </header>
+
+  <main class="auth-main">
+    <div class="auth-card">
+
+      <h1 class="auth-heading">Create your account</h1>
+      <p class="auth-subheading">Join 5,000+ students building industry-ready skills.</p>
+
+      <form id="register-form" novalidate aria-label="Registration form">
+
+        <div class="form-group">
+          <label class="form-label" for="reg-name">Full Name</label>
+          <input
+            class="form-input"
+            type="text"
+            id="reg-name"
+            name="fullName"
+            autocomplete="name"
+            required
+            minlength="2"
+            maxlength="50"
+            placeholder="Priya Sharma"
+            aria-describedby="reg-name-error"
+          />
+          <span id="reg-name-error" class="field-error" role="alert" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="reg-email">Email Address</label>
+          <input
+            class="form-input"
+            type="email"
+            id="reg-email"
+            name="email"
+            autocomplete="email"
+            required
+            placeholder="you@example.com"
+            aria-describedby="reg-email-error"
+          />
+          <span id="reg-email-error" class="field-error" role="alert" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="reg-password">Password</label>
+          <input
+            class="form-input"
+            type="password"
+            id="reg-password"
+            name="password"
+            autocomplete="new-password"
+            required
+            minlength="6"
+            placeholder="At least 6 characters"
+            aria-describedby="reg-pass-error"
+          />
+          <span id="reg-pass-error" class="field-error" role="alert" aria-live="polite"></span>
+        </div>
+
+        <div id="reg-status" class="form-status" role="alert" aria-live="polite"></div>
+
+        <button type="submit" class="btn btn-primary btn-full" id="reg-submit">
+          Create Account
+        </button>
+
+      </form>
+
+      <p class="auth-footer-text" style="margin-top:var(--space-4);font-size:var(--text-xs);color:var(--color-muted)">
+        By creating an account you agree to our Terms of Service and Privacy Policy.
+      </p>
+
+      <p class="auth-footer-text">
+        Already have an account? <a href="login.html">Sign in</a>
+      </p>
+
+    </div>
+  </main>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Course details and lessons — SkillForge Academy." />
+  <title>Course — SkillForge Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/lms.css" />
+</head>
+<body>
+
+  <!-- ── Header ───────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="SkillForge Academy home">
+        <span class="logo-mark" aria-hidden="true">SF</span>
+        <span class="logo-text">SkillForge</span>
+      </a>
+
+      <nav style="display:flex;align-items:center;gap:var(--space-4);" aria-label="LMS navigation">
+        <a href="dashboard.html" class="nav-link" style="font-size:var(--text-sm)">
+          ← My Dashboard
+        </a>
+        <div style="display:flex;align-items:center;gap:var(--space-3);">
+          <div class="student-avatar" id="nav-student-avatar" aria-hidden="true">ST</div>
+          <span style="font-size:var(--text-sm);font-weight:500;color:var(--color-text);display:none" id="nav-student-name" class="nav-student-name"></span>
+        </div>
+        <button class="btn btn-secondary" data-action="logout"
+          style="padding:var(--space-2) var(--space-4);font-size:var(--text-sm)">
+          Log Out
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── Breadcrumb ────────────────────────────────────────────────────── -->
+  <div class="lms-page-header">
+    <nav class="lms-page-breadcrumb" aria-label="Breadcrumb">
+      <a href="dashboard.html">Dashboard</a>
+      <span aria-hidden="true">›</span>
+      <a href="index.html#courses">Courses</a>
+      <span aria-hidden="true">›</span>
+      <span id="breadcrumb-course" aria-current="page">Loading…</span>
+    </nav>
+  </div>
+
+  <main id="main-content">
+    <div class="course-detail-layout">
+
+      <!-- ── LEFT: Course content + lesson viewer ─────────────────────── -->
+      <div>
+
+        <!-- Course header -->
+        <div class="course-detail-header">
+          <div style="display:flex;align-items:center;gap:var(--space-4);margin-bottom:var(--space-4)">
+            <div style="font-size:3rem;line-height:1" id="course-emoji" aria-hidden="true">📚</div>
+            <div>
+              <span class="course-card-tag" id="course-category">Loading…</span>
+            </div>
+          </div>
+
+          <h1 class="course-detail-title" id="course-title">Loading course…</h1>
+
+          <div class="course-detail-meta">
+            <span class="course-meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/>
+              </svg>
+              <span id="course-duration">–</span>
+            </span>
+            <span class="course-meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+              <span id="course-total-lessons">–</span>
+            </span>
+          </div>
+
+          <p class="course-detail-desc" id="course-desc"></p>
+        </div>
+
+        <!-- Certificate banner renders here dynamically -->
+        <div id="course-main-content">
+
+          <!-- ── Lesson Viewer ──────────────────────────────────────── -->
+          <div class="lesson-viewer" id="lesson-viewer">
+            <div class="lesson-viewer-header">
+              <div class="lesson-type-badge" id="lesson-type">▶️ video</div>
+              <h2 class="lesson-viewer-title" id="lesson-title">Select a lesson to begin</h2>
+              <p style="font-size:var(--text-xs);color:var(--color-muted)">
+                Duration: <span id="lesson-duration">–</span>
+              </p>
+            </div>
+
+            <div class="lesson-viewer-body" id="lesson-body">
+              <div class="lesson-placeholder">
+                <div class="lesson-placeholder-icon" aria-hidden="true">👈</div>
+                <h3 style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-xl);color:var(--color-text);margin-bottom:var(--space-2)">
+                  Choose a lesson
+                </h3>
+                <p>Select any lesson from the sidebar to start learning.</p>
+              </div>
+            </div>
+
+            <div class="lesson-viewer-footer">
+              <div style="font-size:var(--text-sm);color:var(--color-muted)">
+                <span id="course-progress-count">0 of 0 lessons</span>
+                &nbsp;·&nbsp;
+                <span id="course-progress-remaining">0 remaining</span>
+              </div>
+              <button
+                class="btn-complete"
+                id="btn-mark-complete"
+                disabled
+                aria-label="Mark this lesson as complete"
+              >
+                Mark as Complete
+              </button>
+            </div>
+          </div>
+
+          <!-- ── Progress Bar ───────────────────────────────────────── -->
+          <div style="background:var(--color-white);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-5) var(--space-6);box-shadow:var(--shadow-sm);">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-3);">
+              <p style="font-family:var(--font-heading);font-weight:600;font-size:var(--text-base);color:var(--color-text)">
+                Course Progress
+              </p>
+              <span class="progress-pct" id="course-progress-pct">0%</span>
+            </div>
+
+            <div
+              class="progress-bar-track"
+              role="progressbar"
+              aria-label="Course completion progress"
+              aria-valuenow="0"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              id="course-progress-fill-track"
+            >
+              <div class="progress-bar-fill" id="course-progress-fill" style="width:0%"></div>
+            </div>
+
+            <p style="margin-top:var(--space-3);font-size:var(--text-xs);color:var(--color-muted)">
+              Complete 60% of lessons to unlock your certificate 🏆
+            </p>
+          </div>
+
+        </div><!-- /course-main-content -->
+      </div><!-- /left column -->
+
+      <!-- ── RIGHT: Lessons Sidebar ─────────────────────────────────── -->
+      <aside class="lesson-sidebar" aria-labelledby="sidebar-title">
+
+        <div class="lesson-sidebar-header">
+          <h2 class="lesson-sidebar-title" id="sidebar-title">Course Content</h2>
+          <div class="lesson-sidebar-progress">
+            <div class="progress-bar-labels">
+              <span id="sidebar-progress-text" style="font-size:var(--text-xs);color:var(--color-muted)">Loading lessons…</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Loading spinner -->
+        <div id="lessons-loading" class="lms-loading" aria-label="Loading lessons">
+          <div class="spinner" role="status"><span class="sr-only">Loading lessons…</span></div>
+        </div>
+
+        <!-- Module groups injected here by course.js -->
+        <div id="lesson-sidebar-body"></div>
+
+      </aside>
+
+    </div><!-- /course-detail-layout -->
+  </main>
+
+  <!-- Toast notification (injected by course.js) -->
+  <div id="lms-toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/course.js"></script>
+</body>
+</html>

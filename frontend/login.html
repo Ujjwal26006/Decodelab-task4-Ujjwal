@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Log in to your SkillForge Academy student account." />
+  <title>Login — SkillForge Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/lms.css" />
+</head>
+<body class="auth-page">
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="SkillForge Academy home">
+        <span class="logo-mark" aria-hidden="true">SF</span>
+        <span class="logo-text">SkillForge</span>
+      </a>
+      <p class="auth-header-link" style="font-size:var(--text-sm);color:var(--color-muted)">
+        Don't have an account? <a href="register.html" style="color:var(--color-primary);font-weight:600">Sign up free</a>
+      </p>
+    </div>
+  </header>
+
+  <main class="auth-main">
+    <div class="auth-card">
+
+      <h1 class="auth-heading">Welcome back</h1>
+      <p class="auth-subheading">Sign in to continue your learning journey.</p>
+
+      <form id="login-form" novalidate aria-label="Login form">
+
+        <div class="form-group">
+          <label class="form-label" for="login-email">Email Address</label>
+          <input
+            class="form-input"
+            type="email"
+            id="login-email"
+            name="email"
+            autocomplete="email"
+            required
+            placeholder="you@example.com"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="login-password">
+            Password
+            <a href="#" style="float:right;font-size:var(--text-xs);color:var(--color-primary);font-weight:500">Forgot password?</a>
+          </label>
+          <input
+            class="form-input"
+            type="password"
+            id="login-password"
+            name="password"
+            autocomplete="current-password"
+            required
+            placeholder="Your password"
+          />
+        </div>
+
+        <div id="login-status" class="form-status" role="alert" aria-live="polite"></div>
+
+        <button type="submit" class="btn btn-primary btn-full" id="login-submit">
+          Sign In
+        </button>
+
+      </form>
+
+      <p class="auth-footer-text">
+        New to SkillForge? <a href="register.html">Create a free account</a>
+      </p>
+
+      <p class="auth-footer-text" style="margin-top:var(--space-2)">
+        <a href="index.html" style="color:var(--color-muted);font-size:var(--text-xs)">← Back to homepage</a>
+      </p>
+
+    </div>
+  </main>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>

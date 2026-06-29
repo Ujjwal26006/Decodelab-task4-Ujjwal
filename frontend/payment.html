@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Complete your course payment on SkillForge Academy." />
+  <title>Checkout — SkillForge Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/lms.css" />
+</head>
+<body class="auth-page">
+
+  <!-- ── Header ─────────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="SkillForge Academy home">
+        <span class="logo-mark" aria-hidden="true">SF</span>
+        <span class="logo-text">SkillForge</span>
+      </a>
+      <div style="display:flex;align-items:center;gap:var(--space-3);">
+        <div class="student-avatar" id="nav-student-avatar" aria-hidden="true">ST</div>
+        <span style="font-size:var(--text-sm);font-weight:500;color:var(--color-text)" id="nav-student-name"></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="auth-main">
+    <div class="auth-card" id="payment-card" style="max-width:560px">
+
+      <!-- Loading state -->
+      <div id="payment-loading" class="lms-loading" aria-label="Loading checkout">
+        <div class="spinner" role="status"><span class="sr-only">Loading…</span></div>
+      </div>
+
+      <!-- Error state (course not found / already enrolled / etc.) -->
+      <div id="payment-error-state" style="display:none" role="alert">
+        <h1 class="auth-heading">Something's not right</h1>
+        <p class="auth-subheading" id="payment-error-message">We couldn't load this checkout.</p>
+        <a href="index.html#courses" class="btn btn-primary btn-full" style="margin-top:var(--space-4)">Back to courses</a>
+      </div>
+
+      <!-- Main checkout content -->
+      <div id="payment-content" style="display:none">
+
+        <h1 class="auth-heading">Complete Your Enrollment</h1>
+        <p class="auth-subheading">Review your order and choose a payment method.</p>
+
+        <!-- Course summary -->
+        <div
+          style="display:flex;gap:var(--space-4);align-items:center;padding:var(--space-4);background:var(--color-neutral);border-radius:var(--radius-md);margin:var(--space-6) 0;"
+        >
+          <div
+            id="payment-course-emoji"
+            aria-hidden="true"
+            style="font-size:2.25rem;line-height:1;width:56px;height:56px;display:flex;align-items:center;justify-content:center;background:var(--color-white);border-radius:var(--radius-md);flex-shrink:0;"
+          >📚</div>
+          <div style="min-width:0;">
+            <p id="payment-course-title" style="font-family:var(--font-heading);font-weight:700;font-size:var(--text-base);color:var(--color-text);margin:0 0 var(--space-1) 0;"></p>
+            <p id="payment-instructor" style="font-size:var(--text-sm);color:var(--color-muted);margin:0;"></p>
+          </div>
+        </div>
+
+        <!-- Price breakdown -->
+        <div style="margin-bottom:var(--space-6)">
+          <div style="display:flex;justify-content:space-between;padding:var(--space-2) 0;font-size:var(--text-sm);color:var(--color-muted);">
+            <span>Course price</span>
+            <span id="payment-price">–</span>
+          </div>
+          <div id="payment-discount-row" style="display:none;justify-content:space-between;padding:var(--space-2) 0;font-size:var(--text-sm);color:var(--color-success);">
+            <span>Discount</span>
+            <span id="payment-discount">–</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;padding:var(--space-3) 0;border-top:1px solid var(--color-border);margin-top:var(--space-2);font-family:var(--font-heading);font-weight:700;font-size:var(--text-lg);color:var(--color-text);">
+            <span>Total</span>
+            <span id="payment-final-amount">–</span>
+          </div>
+        </div>
+
+        <!-- Payment method selection -->
+        <form id="payment-form" novalidate aria-label="Payment form">
+          <fieldset style="border:none;padding:0;margin:0 0 var(--space-6) 0;">
+            <legend class="form-label" style="margin-bottom:var(--space-3)">Payment Method</legend>
+            <div
+              role="radiogroup"
+              aria-label="Choose a payment method"
+              style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-3);"
+            >
+              <label class="payment-method-option">
+                <input type="radio" name="paymentMethod" value="upi" checked />
+                <span>📱 UPI</span>
+              </label>
+              <label class="payment-method-option">
+                <input type="radio" name="paymentMethod" value="card" />
+                <span>💳 Card</span>
+              </label>
+              <label class="payment-method-option">
+                <input type="radio" name="paymentMethod" value="netbanking" />
+                <span>🏦 Net Banking</span>
+              </label>
+              <label class="payment-method-option">
+                <input type="radio" name="paymentMethod" value="wallet" />
+                <span>👛 Wallet</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div id="payment-form-status" class="form-status" role="status" aria-live="polite"></div>
+
+          <button type="submit" class="btn btn-primary btn-full" id="payment-submit">
+            Pay & Enroll Now
+          </button>
+
+          <p style="font-size:var(--text-xs);color:var(--color-muted);text-align:center;margin-top:var(--space-3)">
+            This is a sandbox/demo checkout. No real payment is processed.
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <style>
+    .payment-method-option {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-3);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      font-size: var(--text-sm);
+      transition: border-color .15s ease, background .15s ease;
+    }
+    .payment-method-option:has(input:checked) {
+      border-color: var(--color-primary);
+      background: var(--color-neutral);
+    }
+    .payment-method-option input { accent-color: var(--color-primary); }
+  </style>
+
+  <script src="js/auth.js"></script>
+  <script src="js/payment.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1",
+    "question": "Do I need prior experience to enroll?",
+    "answer": "Most of our courses start from the fundamentals. The course detail page clearly marks the experience level required — Beginner, Intermediate, or Advanced — so you can choose the right starting point."
+  },
+  {
+    "id": "2",
+    "question": "Are the courses live or self-paced?",
+    "answer": "All courses are live, cohort-based, and scheduled on weekday evenings so you can learn while working. Recordings are available for up to 30 days after each session."
+  },
+  {
+    "id": "3",
+    "question": "What is the refund policy?",
+    "answer": "We offer a full refund within the first seven days if you decide the course is not right for you — no questions asked. After that, we do not issue refunds, but you may transfer your seat to the next cohort once."
+  },
+  {
+    "id": "4",
+    "question": "Will I receive a certificate on completion?",
+    "answer": "Yes. Every learner who completes all assignments and the final capstone project receives a verified digital certificate. It includes a unique credential ID you can share on LinkedIn or with employers."
+  },
+  {
+    "id": "5",
+    "question": "How does the placement support work?",
+    "answer": "Our placement team helps you prepare your resume, portfolio, and LinkedIn profile. We also conduct mock interviews, share curated job leads, and connect you directly with our hiring partners."
+  },
+  {
+    "id": "6",
+    "question": "Can I pay in installments?",
+    "answer": "Yes. We offer a two-installment plan for all courses — 60% at enrollment and 40% after the third week. Contact us via the form below and our team will set it up within 24 hours."
+  },
+  {
+    "id": "7",
+    "question": "How large are the cohorts?",
+    "answer": "We deliberately keep cohort sizes small — between 15 and 40 students depending on the course — so every learner gets meaningful attention from mentors during live sessions and doubt-clearing calls."
+  }
+]
