@@ -59,6 +59,7 @@ skillforge/
 
 ---
 
+<<<<<<< HEAD
 ## Prerequisites
 
 - **Node.js** v18 or higher — https://nodejs.org
@@ -285,3 +286,138 @@ The `dataStore.js` utility is the sole data access layer. To migrate:
    - `PATCH /api/admin/enrollments/:id` — approve / reject
    - `GET /api/admin/contacts` — view contact submissions
    - `POST /api/courses` / `PUT /api/courses/:id` / `DELETE /api/courses/:id`
+=======
+# 🔄 Application Workflow
+
+```
+Student Registration
+          │
+          ▼
+      User Login
+          │
+          ▼
+   Browse Courses
+          │
+          ▼
+     Course Enrollment
+          │
+          ▼
+        Payment
+          │
+          ▼
+    Access Lessons
+          │
+          ▼
+ Complete Lessons
+          │
+          ▼
+ Track Progress
+          │
+          ▼
+ Unlock Certificate
+```
+
+---
+
+# 🗄 Database Collections
+
+- Students
+- Courses
+- Modules
+- Lessons
+- Lesson Progress
+- Enrollments
+- Payments
+- Certificates
+- Testimonials
+- Contact Messages
+- FAQ
+- Subscribers
+
+---
+
+# 🔗 REST APIs
+
+- Authentication
+- Courses
+- Lessons
+- Progress
+- Payments
+- Certificates
+- Dashboard
+- Statistics
+
+---
+
+# 🔐 Security Features
+
+- JWT Authentication
+- Password Hashing
+- Protected Routes
+- Environment Variables
+- Input Validation
+- Error Handling
+
+---
+
+# 🚀 Installation
+
+## Clone Repository
+
+```bash
+git clone https://github.com/yourusername/SkillForge-LMS.git
+```
+
+---
+
+## Backend
+
+```bash
+cd backend
+
+npm install
+
+npm run dev
+```
+
+---
+
+## Frontend
+
+Open
+
+```
+frontend/index.html
+```
+
+or
+
+Run using Live Server.
+
+---
+
+# 🌟 Future Improvements
+
+- Instructor Dashboard
+- Admin Panel
+- AI Course Recommendation
+- Email Verification
+- Password Reset
+- Video Streaming
+- Discussion Forum
+- Assignment Submission
+- Notifications
+- Dark Mode
+
+---
+
+
+
+# 📜 License
+
+This project is developed for educational purposes and Full Stack Development learning.
+
+---
+
+⭐ If you found this project useful, consider giving it a Star.
+>>>>>>> ee25f1ec85e5bad677f007469912ab9648c02580
